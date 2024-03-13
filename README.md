@@ -4,5 +4,5 @@ Vo ovaa aplikacija, iskoristen e ekranot od aplikacijata 'Favorite Twitter searc
 so soodvetni modifikacii. Vovedeno e citanje i zapisuvanje od i vo tekstualen dokument dictionary.txt koj e smesten vo internal storage na samata aplikacija, 
 a vo koj ima makedonsko-angliski recnik i obratno. Isto taka, ima i moznost za prebaruvanje niz recnikot na makedonski,
 a i na angliski i prikazuvanje na soodvetniot zbor (preveden na angliski ili makedonski vo zavisnost od vneseniot zbor) za napisaniot dokolku toj postoi vo recnikot. 
-Isto taka, ima i moznost za dodavanje na novi zborovi vo recnikot (angliski ili makedonski), so dodavanje na nivnite soodvetni prevodi (angliski ili makedonski i obratno, vo zavisnost na koj jazik e vneseniot zbor). 
+Isto taka, ima i moznost za dodavanje na novi zborovi vo recnikot (angliski ili makedonski), so dodavanje na nivnite soodvetni prevodi (angliski ili makedonski, vo zavisnost na koj jazik e vneseniot zbor). 
 Iskoristen e i Toast koj upatuva na uspesno dodavanje na zbor vo recnikot 'Word added to dictionary', po klikanje na kopceto 'Add word'.
