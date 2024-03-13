@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-    <string name="app_name">Favorite Twitter Searches</string>
+    <string name="app_name">Dictionary and Favorite Twitter searches</string>
     <string name="searchURL">http://twitter.com/search?q=</string>
     <string name="tagPrompt">Tag your query</string>
     <string name="queryPrompt">Enter Twitter search query here</string>
-    <string name="taggedSearches">Tagged Searches</string>
+    <string name="taggedSearches">Tagged searches</string>
     <string name="edit">Edit</string>
     <string name="clearTags">Clear Tags</string>
     <string name="save">Save</string>

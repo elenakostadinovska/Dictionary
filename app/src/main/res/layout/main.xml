@@ -1,81 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tableLayout" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:padding="5dp"
-    android:stretchColumns="*" android:background="@android:color/white">
-
-    <!-- tableRowO -->
-<TableRow android:id="@+id/tableRow0"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent">
-    <EditText android:layout_width="match_parent"
-        android:layout_height="48dp" android:layout_span="2"
-        android:inputType="text" android:id="@+id/queryEditText"
-        android:hint="@string/queryPrompt"
-        android:imeOptions="actionNext"
-        android:autofillHints="">
-    </EditText>
-</TableRow>
-
-<!-- tableRow1 -->
-<TableRow android:id="@+id/tableRow1"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent">
-    <EditText android:layout_height="48dp"
-        android:hint="@string/tagPrompt" android:inputType="text"
-        android:id="@+id/tagEditText" android:imeOptions="actionDone"
-        android:layout_gravity="center_vertical"
-        android:autofillHints=""></EditText>
-    <Button android:id="@+id/saveButton"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:text="@string/save"></Button>
-</TableRow>
-
-<!-- tableRow2 -->
-<TableRow android:id="@+id/tableRow2"
-    android:layout_height="wrap_content"
-
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
-    android:background="@color/light_orange">
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="5dp"
+    android:stretchColumns="*">
 
-<TextView android:layout_height="wrap_content"
-    android:id="@+id/taggedSearchesTextView"
-    android:text="@string/taggedSearches"
-    android:layout_width="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:layout_span="2" android:textSize="18sp"
-    android:textColor="@android:color/black"
-    android:padding="5dp"></TextView>
-</TableRow>
+    <!-- Dictionary Search Section -->
+    <!-- Row 1: Title -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <!-- tableRow3 -->
-    <TableRow android:id="@+id/tableRow3"
-        android:background="@color/light_orange"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" android:layout_weight="1">
-
-        <ScrollView android:id="@+id/queryScrollView"
+        <!-- Title for Dictionary Search Section -->
+        <TextView
+            android:id="@+id/dictionaryTitleTextView"
             android:layout_width="match_parent"
-            android:layout_span="2" android:padding="5dp"
-            android:contentDescription="Scroll view for query results">
-            <TableLayout android:id="@+id/queryTableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:padding="5dp"
-            android:stretchColumns="*"> </TableLayout>
-        </ScrollView>
+            android:layout_height="wrap_content"
+            android:text="Dictionary search"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="5dp" />
     </TableRow>
 
-    <!-- tableRow4 -->
-    <TableRow android:id="@+id/tableRow4"
+    <!-- Row 2: Search EditText and Button -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- EditText for dictionary search -->
+        <EditText
+            android:id="@+id/dictionarySearchEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Enter word to search"
+            android:inputType="text"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Button to trigger dictionary search -->
+        <Button
+            android:id="@+id/dictionarySearchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_gravity="center_vertical"
+             />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/translationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translation:"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="5dp" />
+    </TableRow>
+
+    <!-- Row 3: Result TextView -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TextView to display dictionary search result -->
+        <TextView
+            android:id="@+id/dictionaryResultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/newWordTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new word"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="5dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/englishWordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter English word"
+            android:padding="5dp"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <!-- Row 2: Macedonian Translation and Add Word Button -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!-- EditText for Macedonian Translation -->
+        <EditText
+            android:id="@+id/macedonianTranslationEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Macedonian translation"
+            android:padding="5dp"/>
+
+        <!-- Button to Add Word -->
+        <Button
+            android:id="@+id/addWordButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Word"
+            android:padding="5dp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/twitterSearchesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorite Twitter searches"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="5dp" />
+    </TableRow>
+
+    <!-- Your existing table rows -->
+    <!-- tableRow0 -->
+    <TableRow
+        android:id="@+id/tableRow0"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        <Button android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_span="2"
+            android:inputType="text"
+            android:id="@+id/queryEditText"
+            android:hint="@string/queryPrompt"
+            android:imeOptions="actionNext"
+            android:autofillHints="" />
+    </TableRow>
+
+    <!-- tableRow1 -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:layout_height="48dp"
+            android:hint="@string/tagPrompt"
+            android:inputType="text"
+            android:id="@+id/tagEditText"
+            android:imeOptions="actionDone"
+            android:layout_gravity="center_vertical"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/save"
+            />
+    </TableRow>
+
+    <!-- tableRow2 -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/light_orange">
+
+        <TextView
+            android:id="@+id/taggedSearchesTextView"
+            android:layout_height="wrap_content"
+            android:text="@string/taggedSearches"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_span="2"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:padding="5dp" />
+    </TableRow>
+
+    <!-- tableRow3 -->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:background="@color/light_orange"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/queryScrollView"
+            android:layout_width="match_parent"
+            android:layout_span="2"
+            android:padding="5dp"
+            android:contentDescription="Scroll view for query results">
+
+            <TableLayout
+                android:id="@+id/queryTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:stretchColumns="*"></TableLayout>
+
+        </ScrollView>
+
+    </TableRow>
+
+    <!-- tableRow4 -->
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/clearTags"
             android:id="@+id/clearTagsButton"
-            android:layout_span="2" android:layout_marginTop="5dp"></Button>
+            android:layout_span="2"
+            android:layout_marginTop="5dp" />
     </TableRow>
+
 </TableLayout>
